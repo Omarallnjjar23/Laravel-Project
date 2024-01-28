@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Models\System;
 use App\Models\Progress;
 use App\Models\Developer;
+use App\Http\Requests\DateValidationRequest;
 
 class ManagerController extends Controller
 {
@@ -64,12 +65,12 @@ class ManagerController extends Controller
     }
 
 
-    public function storeProject(Request $request,$id)
+    public function storeProject(DateValidationRequest $request,$id)
     {
         $requestPending = RequestModel::where('id', $id)->first();  
 
         $developer = Developer::where('id',$request->leader_developer_id)->first();
-
+        
         if(!$requestPending || $requestPending->status == 'approved')
             abort(404); 
     

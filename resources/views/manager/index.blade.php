@@ -10,7 +10,7 @@
             <h2 class="text-primary">Requests List</h2>
             <div class="d-flex gap-3">
                 <a href="manager/projects" class="btn btn-outline-primary">View Projects</a>
-                <a href="manager/profile" class="btn btn-outline-primary">View Profile</a>
+                {{-- <a href="manager/profile" class="btn btn-outline-primary">View Profile</a> --}}
             </div>
         </div>
 

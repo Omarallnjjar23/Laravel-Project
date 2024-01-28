@@ -55,7 +55,7 @@
                         <li class="list-group-item text-danger">No developers have been assigned yet</li>
                     @endforelse
                 </ul>
-          
+
                 <div class="mt-4 d-flex gap-2">
                     <a href={{ "/$path/projects/{$project->id}/progress" }} class="btn btn-outline-primary">Progress</a>
                     @can('isManager')

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\Owner;
+use App\Models\Manager;
 use App\Models\Developer;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -70,7 +72,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $owner =  Developer::create([
+        $owner =  Owner::create([
             'name' => $data['name'],
         ]);
 
@@ -78,7 +80,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role' =>'developer',
+            'role' =>'owner',
             'user_id' => $owner->id,
         ]);
     }

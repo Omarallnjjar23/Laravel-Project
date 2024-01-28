@@ -12,7 +12,7 @@
                 <a href="/owner/show-requests" class=" mb-4 btn btn-outline-primary">
                     View Requests
                 </a>
-                <a href="owner/profile" class="mb-4 btn btn-outline-primary">View Profile</a>
+                {{-- <a href="owner/profile" class="mb-4 btn btn-outline-primary">View Profile</a> --}}
             </div>
         </div>
 
